@@ -1,0 +1,14 @@
+/* CSS Document */
+
+html {
+	font-family: basic-sans, sans-serif;
+}
+
+/* .form {
+	
+} */
+
+.form label {
+	display: inline-block;
+	width: 72px;
+}
