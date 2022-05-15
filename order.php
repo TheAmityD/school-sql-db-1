@@ -21,7 +21,7 @@
 			<input type="number" id="quantity" name="quantity" maxlength="4" placeholder="Quantity">
 			<br>
 			<label>Price:</label>
-			<input type="number" id="price" name="price" maxlength="10" placeholder="Price">
+			<input type="number" id="price" name="price" maxlength="10" placeholder="Price" step=".01">
 			<br>
 			<label>ID:</label>
 			<input type="number" id="id" name="id" maxlength="5" placeholder="ID">
@@ -37,8 +37,9 @@
 			$quants=$_POST["quantity"];
 			$price=$_POST["price"];
 			$aidi=$_POST["id"];
-
-			$query="insert into perches values ('','$model','$quants','$price','$aidi')";
+			$date="select getdate()";
+			
+			$query="insert into perches values ('','$model','$quants','$price','$aidi','$date')";
 			$query_run=mysqli_query($con,$query);
 			if($query_run)
 			{
