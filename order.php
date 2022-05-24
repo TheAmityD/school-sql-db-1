@@ -10,8 +10,7 @@
 <title>An SQL Test.</title>
 </head>
 <body>
-	<h1>ORDER!!!!!!!!!!<br>
-	SAPE NAK TAIK</h1>
+	<h1>ORDER!!!!!!!!!!<br></h1>
 	<div class="form">
 		<form method="post" action="order.php">
 			<label>Model:</label>
@@ -37,7 +36,7 @@
 			$quants=$_POST["quantity"];
 			$price=$_POST["price"];
 			$aidi=$_POST["id"];
-			$date="select getdate()";
+			$date="getdate()";
 			
 			$query="insert into perches values ('','$model','$quants','$price','$aidi','$date')";
 			$query_run=mysqli_query($con,$query);
